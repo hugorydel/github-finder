@@ -1,3 +1,5 @@
+/** @format */
+
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 /* Global Styles */
@@ -250,6 +252,14 @@ img {
 .badge-primary,
 .alert-primary {
   background: var(--primary-color);
+  color: #fff;
+}
+
+.btn-hug,
+.bg-hug,
+.badge-hug,
+.alert-hug {
+  background: rgb(185, 112, 15);
   color: #fff;
 }
 
