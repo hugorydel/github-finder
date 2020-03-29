@@ -7,16 +7,18 @@ import { Link } from 'react-router-dom';
 
 export class User extends Component {
   componentDidMount() {
-    const { getUser, match } = this.props;
+    const { getUser, match, getUserRepos } = this.props;
     //Here we're calling the Class's props which now contains getUser as in App.js we passed it into here.
     //React Router will supply any dynamic pieces of the URL to the component via an object called match.params as own props of the related component which means that we can access the login
     //The param of login is the path that we've set in App.js = "/user/:login"
     getUser(match.params.login);
+    getUserRepos(match.params.login);
   }
   static propTypes = {
     loading: PropTypes.bool,
     user: PropTypes.object.isRequired,
-    getUser: PropTypes.func.isRequired
+    getUser: PropTypes.func.isRequired,
+    getUserRepos: PropTypes.func.isRequired
   };
 
   render() {
